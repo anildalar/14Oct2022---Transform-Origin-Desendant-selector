@@ -1,0 +1,66 @@
+.parent{
+    width: 500px;
+    height: 500px;
+    background: red;
+    border:10px solid #000;
+    /*
+     I can write anything here
+     margin:T/B L/R;
+    */
+    margin:160px auto;
+    position:relative;
+}
+
+/*
+ Decendant Selector
+
+  parent child{
+    property:value;
+  }
+*/
+
+.parent .child{
+    width:250px;
+    height:250px;
+    /*
+    CSS Syntax
+    transition: property duration timing-function delay|initial|inherit;
+    */
+    transition: all 1s linear;
+    transform:rotate(0deg);
+}
+
+.parent .child1{
+    /* State 1 */
+    
+    background:green;
+    transform-origin: left top;
+   
+}
+.parent:hover .child1,.parent:hover .child2,.parent:hover .child3,.parent:hover .child4{
+     /* State 2 */
+    transform:rotate(360deg);
+}
+
+
+.parent .child2{
+    background:orange;
+    transform-origin: left bottom;
+    transform:rotate(0deg);
+}
+
+.parent .child3{
+    background:purple;
+    position:absolute;
+    top:0px;
+    right: 0px;
+    transform-origin: right top;
+}
+
+.parent .child4{
+    background:blue;
+    position:absolute;
+    bottom:0px;
+    right: 0px;
+    transform-origin: right bottom;
+}
